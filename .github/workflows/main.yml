@@ -25,19 +25,19 @@ jobs:
 
     
     - name: Navigate to Project Directory
-      run: cd C:\Users\Admin\source\repos\AssementCoreApplication
+      run: cd C://Users//Admin//source//repos//AssementCoreApplication
 
    
     - name: Restore dependencies
-      run: dotnet restore C:\Users\Admin\source\repos\AssementCoreApplication.csproj
+      run: dotnet restore C://Users//Admin//source//repos//AssementCoreApplication.csproj
 
    
     - name: Build
-      run: dotnet build C:\Users\Admin\source\repos\AssementCoreApplication.csproj --configuration Release
+      run: dotnet build C://Users//Admin//source//repos//AssementCoreApplication.csproj --configuration Release
 
    
     - name: Run Tests
-      run: dotnet test C:\Users\Admin\source\repos\AssementCoreApplication.csproj --configuration Release
+      run: dotnet test C://Users//Admin//source//repos//AssementCoreApplication.csproj --configuration Release
 
   deploy:
     runs-on: ubuntu-latest
@@ -56,11 +56,11 @@ jobs:
 
     # Step 3: Navigate to the project directory (if needed)
     - name: Navigate to Project Directory
-      run: cd C:\Users\Admin\source\repos\AssementCoreApplication
+      run: cd C://Users//Admin//source//repos//AssementCoreApplication
 
     # Step 4: Publish the app (to a folder for deployment)
     - name: Publish Application
-      run: dotnet publish C:\Users\Admin\source\repos\AssementCoreApplication.csproj --configuration Release --output ./publish
+      run: dotnet publish C://Users//Admin//source//repos//AssementCoreApplication.csproj --configuration Release --output ./publish
 
     # Step 5: Deploy (Add deployment steps here, depending on your hosting provider)
     - name: Deploy to Hosting Provider
