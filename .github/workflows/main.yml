@@ -23,12 +23,20 @@ jobs:
       with:
         dotnet-version: '8.0'  # Specify .NET 8.0 version
 
-    # Step 3: Restore dependencies for the specific project
-    
+    # Step 3: Navigate to the project directory (e.g., 'c:/repo/OrderProcessingApp')
+    - name: Navigate to Project Directory
+      run: cd C:\Users\Admin\source\repos\AssementCoreApplication
 
-    # Step 4: Build the application
+    # Step 4: Restore dependencies for the specific project
+    - name: Restore dependencies
+      run: dotnet restore C:\Users\Admin\source\repos\AssementCoreApplication.csproj
+
+    # Step 5: Build the application
     - name: Build
-      run: dotnet build C:\Users\Admin\source\repos\AssementCoreApplication.sin --configuration Release
+      run: dotnet build C:\Users\Admin\source\repos\AssementCoreApplication.csproj --configuration Release
+
+    # Step 6: Run tests
+    
 
   deploy:
     runs-on: ubuntu-latest
@@ -45,11 +53,15 @@ jobs:
       with:
         dotnet-version: '8.0'
 
-    # Step 3: Publish the app (to a folder for deployment)
-    - name: Publish Application
-      run: dotnet publish C:\Users\Admin\source\repos\AssementCoreApplication.sin --configuration Release --output ./publish
+    # Step 3: Navigate to the project directory (if needed)
+    - name: Navigate to Project Directory
+      run: cd C:\Users\Admin\source\repos\AssementCoreApplication
 
-    # Step 4: Deploy (Add deployment steps here, depending on your hosting provider)
+    # Step 4: Publish the app (to a folder for deployment)
+    - name: Publish Application
+      run: dotnet publish C:\Users\Admin\source\repos\AssementCoreApplication.csproj --configuration Release --output ./publish
+
+    # Step 5: Deploy (Add deployment steps here, depending on your hosting provider)
     - name: Deploy to Hosting Provider
       run: |
         # Example deployment script for deploying to Azure App Service
