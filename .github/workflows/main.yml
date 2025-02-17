@@ -25,7 +25,7 @@ jobs:
 
     # Step 3: Navigate to the project directory (e.g., 'c:/repo/OrderProcessingApp')
     - name: Navigate to Project Directory
-      run: cd C:\Users\Admin\source\repos\AssementCoreApplication
+      run: cd C:\Users\Admin\source\repos\AssementCoreApplication.csproj
 
     # Step 4: Restore dependencies for the specific project
     - name: Restore dependencies
