@@ -28,7 +28,7 @@ jobs:
 
     # Step 4: Build the application
     - name: Build
-      run: dotnet build ./AssementCoreApplication/AssementCoreApplication.sin --configuration Release
+      run: dotnet build ./AssementCoreApplication.sin --configuration Release
 
   deploy:
     runs-on: ubuntu-latest
