@@ -24,8 +24,7 @@ jobs:
         dotnet-version: '8.0'  # Specify .NET 8.0 version
 
     # Step 3: Restore dependencies for the specific project
-    - name: Restore dependencies
-      run: dotnet restore ./AssementCoreApplication/AssementCoreApplication.sin
+    
 
     # Step 4: Build the application
     - name: Build
