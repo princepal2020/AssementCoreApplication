@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Order Entry";
+}
+
+<form method="post" action="Home/CalculateOrder">
+    <h3>Order Entry</h3>
+    <div>
+        <label for="OrderAmounnt">Order Amount $</label>
+        <input type="number" class="form-control" width="30" name="OrderAmount" required accept="number" min="1" step="0.1" />
+    </div>
+    <div>
+        <label for="Customertype">Order Amount</label>
+        <select name="Customertype" width="30" class="form-control">
+            <option value="New">New</option>
+            <option value="Loyal">Loyal</option>
+        </select>
+            
+    </div>
+    <div>
+        <input type="submit" class="btn btn-success mt-2" value="Save" />
+    </div>
+</form>

@@ -1,0 +1,12 @@
+﻿@model OrderModel 
+
+<h3>
+   Display Result
+</h3>
+<div>
+    <p><strong>Oder Amount :</strong>$@Model.OrderAmount</p>
+    <p><strong>Customer Type :</strong>@Model.Customertype</p>
+    <p><strong>Discount Applied :</strong>$@Model.DiscountAmount</p>
+    <p><strong>Final Amount :</strong>$@Model.TotalAmount</p>
+    <a asp-action="Index" asp-controller="Home">Go to Home</a>
+</div>
