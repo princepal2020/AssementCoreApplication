@@ -25,11 +25,11 @@ jobs:
 
     # Step 3: Restore dependencies for the specific project
     - name: Restore dependencies
-      run: dotnet restore ./AssementCoreApplication/AssementCoreApplication.csproj
+      run: dotnet restore ./AssementCoreApplication/AssementCoreApplication.sin
 
     # Step 4: Build the application
     - name: Build
-      run: dotnet build ./AssementCoreApplication/AssementCoreApplication.csproj --configuration Release
+      run: dotnet build ./AssementCoreApplication/AssementCoreApplication.sin --configuration Release
 
   deploy:
     runs-on: ubuntu-latest
@@ -48,7 +48,7 @@ jobs:
 
     # Step 3: Publish the app (to a folder for deployment)
     - name: Publish Application
-      run: dotnet publish ./AssementCoreApplication/AssementCoreApplication.csproj --configuration Release --output ./publish
+      run: dotnet publish ./AssementCoreApplication/AssementCoreApplication.sin --configuration Release --output ./publish
 
     # Step 4: Deploy (Add deployment steps here, depending on your hosting provider)
     - name: Deploy to Hosting Provider
