@@ -28,7 +28,7 @@ jobs:
 
     # Step 4: Build the application
     - name: Build
-      run: dotnet build ./AssementCoreApplication.sin --configuration Release
+      run: dotnet build C:\Users\Admin\source\repos\AssementCoreApplication.sin --configuration Release
 
   deploy:
     runs-on: ubuntu-latest
@@ -47,7 +47,7 @@ jobs:
 
     # Step 3: Publish the app (to a folder for deployment)
     - name: Publish Application
-      run: dotnet publish ./AssementCoreApplication/AssementCoreApplication.sin --configuration Release --output ./publish
+      run: dotnet publish C:\Users\Admin\source\repos\AssementCoreApplication.sin --configuration Release --output ./publish
 
     # Step 4: Deploy (Add deployment steps here, depending on your hosting provider)
     - name: Deploy to Hosting Provider
