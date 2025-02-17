@@ -25,7 +25,7 @@ jobs:
 
     
     - name: Navigate to Project Directory
-      run: cd c:/repo/OrderProcessingApp
+      run: cd C:\Users\Admin\source\repos\AssementCoreApplication
 
    
     - name: Restore dependencies
