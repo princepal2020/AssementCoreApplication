@@ -56,7 +56,7 @@ jobs:
 
     # Step 3: Navigate to the project directory (if needed)
     - name: Navigate to Project Directory
-      run: cd c:/repo/OrderProcessingApp
+      run: cd C:\Users\Admin\source\repos\AssementCoreApplication
 
     # Step 4: Publish the app (to a folder for deployment)
     - name: Publish Application
